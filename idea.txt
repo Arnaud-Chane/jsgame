@@ -1,0 +1,14 @@
+### Space Invader revisited
+
+Having 6 buttons at the bottom
+pressing one of them will fire a bullet that will go up until it touches something and will only go up one case at a time
+Add a button action to pass one action
+
+
+
+### Remastered
+
+letting the player writing what actions they like to do
+so they need to plan what they will do in one sentence
+every button will have a name
+

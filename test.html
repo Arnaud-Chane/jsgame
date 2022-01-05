@@ -1,100 +1,37 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="UFT-8">
-  <title>Quiz</title>
-  <style>
-  
-  </style>
+  <meta charset="UTF-8">
+  <title>Test</title>
 </head>
 <body>
-  <div id="container">
-    <div id="start">Start Quiz</div>
-    <div id="quiz" style="display: none">
-      <div id="question"></div>
-      <div id="choices">
-        <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-        <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-        <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-      </div>
-      <div id="timer">
-        <div id="counter"></div>
-        <div id="btimeGauge"></div>
-        <div id="timeGauge"></div>
-      </div>
-      <div id="progress"></div>
-    </div>
-    <div id="scoreContainer" style="display: none"></div>
-  </div>
-  <script>
-// Select all elements
-const start = document.getElementById("start");
-const quiz = document.getElementById("quiz");
-const question = document.getElementById("question");
-const choiceA = document.getElementById("A");
-const choiceB = document.getElementById("B");
-const choiceC = document.getElementById("C");
-const counter = document.getElementById("counter");
-const timeGauge = document.getElementById("timeGauge");
-const progress = document.getElementById("progress");
-const scoreDiv = document.getElementById("scoreContainer");
+  <div>Hello World</div>
+  <button id=”name" onclick="createPlayer()">Tell me your name</button>
 
-// create our questions
-let questions = [
-    {
-        question : "What does HTML stand for?",
-        imgSrc : "img/html.png",
-        choiceA : "Correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
-        correct : "A"
-    },{
-        question : "What does CSS stand for?",
-        imgSrc : "img/css.png",
-        choiceA : "Wrong",
-        choiceB : "Correct",
-        choiceC : "Wrong",
-        correct : "B"
-    },{
-        question : "What does JS stand for?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
-        correct : "C"
-    }
-];
-
-// Create some variables
-
-const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
-let count = 0;
-const questionTime = 10; // 10s
-const gaugeWidth = 150; // 150px
-const gaugeUnit = gaugeWidth / questionTime;
-let TIMER;
-let score = 0;
-
-// render a question
-function renderQuestion(){
-  let q = questions[runningQuestion];
-  question.innerHTML = "<p>" + q.question + "</p>";
-  choiceA.innerHTML = q.choiceA;
-  choiceB.innerHTML = q.choiceB;
-  choiceC.innerHTML = q.choiceC;
-}
-
+<script>
+  alert("Hello my dear,\nWhat is your name ?");
+  
+  function createPlayer(){
+    var namePlayer = prompt("Say your name :");
+  };
+    var p = document.createElement("p");
+    p.innerHTML = promptNamePlayer;
+    document.body.appendChild(p);
  
+</script>
 
 
+<!--
+### Adding block on the page :
+
+create a button which will launch a prompt
+
+with this prompt, the player will write the name of the block
+and it will add the span with the style to draw the block on the page
 
 
+-->
 
 
-
-
-
-
-</body>	
+</body>
 </html>

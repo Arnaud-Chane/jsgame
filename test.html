@@ -2,60 +2,51 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Test Page</title>
+  <title>Test</title>
 </head>
 <body>
-  <p>Hello World</p>
-  <p>test</p>
+  <div>Hello World</div>
 
 <script>
   var style = document.createElement("style");
-  var actualeStyle = ` 
-    .blockPlayer{
+  style.innerHTML = `
+      .myBlock {
       background-color: black;
       height: 100px;
       width: 100px;
-    }
-
-  `;
-
-  style.innerHTML = actualeStyle;
+    }`;
   document.head.appendChild(style);
 
-  var divBlock = document.createElement("div");
-  divBlock.setAttribute("class", "blockPlayer");
-  document.body.appendChild(divBlock);
 
-  var btnStyle = document.createElement("button");
-  btnStyle.innerHTML = ("Click on me to change style");
-  document.body.appendChild(btnStyle);
+  var blockButton = document.createElement("button");
+  blockButton.setAttribute("onclick", "createBlock()");
+  blockButton.innerHTML = "Click here to create a block.";
+  document.body.appendChild(blockButton);
 
+  function createBlock() {
+    var buttonBuild = document.createElement("div");
+    buttonBuild.setAttribute("class", "myBlock");
+    document.body.appendChild(buttonBuild);
+  };
+
+  var n = document.createElement("p");
+  n.innerHTML = "Nope";
+  document.body.appendChild(n);
   
-
-
-
-
-/* 
-var numberPx = 100;
-var pxPx = "px";
-var valuePx = numberPx + pxPx;
-
-block.setAttribute("style", valuePx);
-
-function mvRight(){
-  if click on button
-    numberPx += 10;
-  block.setAttribute("style", valuePx);
-
-};
-
-// 
-
-
-
-*/
-
 </script>
+
+
+<!--
+### Adding block on the page :
+
+create a button which will launch a prompt
+
+with this prompt, the player will write the name of the block
+and it will add the span with the style to draw the block on the page
+
+
+-->
+
+
 </body>
 </html>
-

@@ -12,8 +12,14 @@
   </style>
 </head>
 <body>
-  <div>Hello World</div>
+  <div class="hello1">Hello World</div>
+<button onclick="allerADroite()">droite</button>
+
 <script>
+var droite = 0;
+
+ var div1 = document.querySelector('.hello1');
+
   var blockButton = document.createElement("button");
   blockButton.setAttribute("onclick", "createBlock()");
   blockButton.innerHTML = "Click here to create a block.";
@@ -23,7 +29,24 @@
     var buttonBuild = document.createElement("div");
     buttonBuild.setAttribute("class", "myBlock");
     document.body.appendChild(buttonBuild);
+buttonBuild.style.position = "absolute";
+buttonBuild.style.top = "150px";
   };
+
+function allerADroite() {
+    //var block = document.querySelector(".myBlock");
+    var blocks = document.getElementsByClassName("myBlock");
+//console.log(blocks);
+    for (const block of blocks) {
+droite += 10;
+
+var pixel = "px";
+      for (const attribute in block) {
+        console.log(block.style.left);
+        block.style.left = temp + pixel;
+      }
+    }
+}
 </script>
 
 

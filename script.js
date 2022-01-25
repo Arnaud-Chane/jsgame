@@ -102,6 +102,13 @@ document.body.appendChild(btnMoveLeft);
 
 // ------------------ Enemies ------------------ //
 
+var enemiesIdArray = [];
+var enemiesNbId = 0;
+var enemiesStrId = "alien";
+var enemyId = "";
+
+
+
 var btnSpawnEnemies = document.createElement("button");
 btnSpawnEnemies.innerHTML = "Enemies Spawn";
 btnSpawnEnemies.setAttribute("class", "btn");
@@ -122,7 +129,12 @@ function EnemySpawn(){
     background-color: black; 
     border-radius: 50%;
   `;
-  
+  enemiesNbId += 1;
+  enemyId = enemiesStrId + enemiesNbId;
+  enemiesIdArray.push(enemyId);
+  enemies.setAttribute("id", enemyId);
+  console.log(enemies.id);
+  console.log(enemiesIdArray);
   document.body.appendChild(enemies);
   
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+</head>
+<body>
+
+<p id="test">First line</p>
+<p id="test3">Third line</p>
+
+<script>
+
+var p1ID = document.getElementById("test");
+p1ID.setAttribute("onclick", "addTest()");
+var testP = document.createElement("p");
+testP.innerHTML = "Second line";
+
+function addTest(){
+  p1ID.appendChild(testP);
+};
+
+</script>
+</body>
+</html>

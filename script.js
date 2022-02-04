@@ -1,55 +1,9 @@
-// ------------------ Style Section ------------------ //
-
-// Style for the Ship
-var styleShip = document.createElement("style");
-styleShip.innerHTML = `
-#pyuShip {
-  position: absolute;
-  top: 58%;
-  height: 100px;
-  width: 100px;
-}
-`;
-document.head.appendChild(styleShip);
-
-// Style for buttons
-
-var styleBtn = document.createElement("style");
-styleBtn.innerHTML = `
-.btn {
-  position: absolute;
-  top: 80%;
-  height:80px;
-  width: 80px;
-}
-
-#btnShipMoveRight {
-  right: 10%;
-}
-
-#btnShipMoveLeft {
-  left: 10%;
-}
-
-#btnSpawnEnemies {
-  left: 37%;
-}
-`
-document.head.appendChild(styleBtn);
-
-
-
-
-
-
-
-
 // ------------------ Ship ------------------ //
 
 // Adding the Ship to body
 
 var imgPyu = document.createElement("img");
-imgPyu.src = "pyuBig.png";
+imgPyu.src = "knight/k1.png";
 imgPyu.setAttribute("id", "pyuShip");
 document.body.appendChild(imgPyu);
 
@@ -100,42 +54,9 @@ document.body.appendChild(btnMoveLeft);
 
 
 
-// ------------------ Enemies ------------------ //
-
-var enemiesIdArray = [];
-var enemiesNbId = 0;
-var enemiesStrId = "alien";
-var enemyId = "";
 
 
 
-var btnSpawnEnemies = document.createElement("button");
-btnSpawnEnemies.innerHTML = "Enemies Spawn";
-btnSpawnEnemies.setAttribute("class", "btn");
-btnSpawnEnemies.setAttribute("id", "btnSpawnEnemies");
-btnSpawnEnemies.setAttribute("onclick", "EnemySpawn()");
-document.body.appendChild(btnSpawnEnemies);
 
 
-function EnemySpawn(){
-  var enemies = document.createElement("div");
-  enemies.style = 
-  `
-    position: absolute; 
-    top: 20px; 
-    left: 70px; 
-    height: 50px; 
-    width: 50px; 
-    background-color: black; 
-    border-radius: 50%;
-  `;
-  enemiesNbId += 1;
-  enemyId = enemiesStrId + enemiesNbId;
-  enemiesIdArray.push(enemyId);
-  enemies.setAttribute("id", enemyId);
-  console.log(enemies.id);
-  console.log(enemiesIdArray);
-  document.body.appendChild(enemies);
-  
-}
 
